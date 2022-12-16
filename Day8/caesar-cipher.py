@@ -8,6 +8,7 @@ test = ['h','e','l','l','o']
 # ,'w','o','r','l','d','z'
 
 encode = []
+decode = []
 
 print("Welcome to Caesar Cipher!")
 stopEncode = False
@@ -21,21 +22,43 @@ while not stopEncode:
     alpha = list(string.ascii_lowercase)
     cipher = list(alpha[shift:]+alpha[0:shift])
     
-    
-    for j in list(message): 
-        
-        for i,v in enumerate(alpha):
-            if j == v:
-                encode.append(cipher[i])
+    if coding == "encode":
+
+        for j in list(message): 
             
-                   
-        if not j.isalpha():
-            encode.append(j)
-    
-    print(f'Here is the encoded result: {"".join(encode)}')
-    again = input("Type \'yes\' if you want to go again. Otherwise type \'no\':")
-    if  again == 'no':
-        stopEncode=True
+            for i,v in enumerate(alpha):
+                if j == v:
+                    encode.append(cipher[i])
+                
+                    
+            if not j.isalpha():
+                encode.append(j)
+        
+        print(f'Here is the encoded result: {"".join(encode)}')
+        again = input("Type \'yes\' if you want to go again. Otherwise type \'no\':")
+        if  again == 'no':
+            stopEncode=True
+        else:
+            encode.clear()
+    else:
+        for j in list(message): 
+            
+            for i,v in enumerate(cipher):
+                if j == v:
+                    decode.append(alpha[i])
+                
+                    
+            if not j.isalpha():
+                decode.append(j)
+        
+        print(f'Here is the decoded result: {"".join(decode)}')
+        again = input("Type \'yes\' if you want to go again. Otherwise type \'no\':")
+        if  again == 'no':
+            stopEncode=True
+        else:
+            decode.clear()
+        
+        
         
     
            
