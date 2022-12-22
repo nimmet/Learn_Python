@@ -1,5 +1,6 @@
 quit =""
 result=0
+again=""
 
 
 def calculate():
@@ -50,23 +51,27 @@ def calculateWithResult(result):
 
 while quit !="q":
     result=calculate() 
-    again = input("Do you want to continue with this result? y,n or q for quit: ")
+    again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
 
     
     
     
     
-    if again == "y":
+    while again == "y":
         # first = int(input("What is the first number?: "))
+        
         result = calculateWithResult(result)
-            
-        again = input("Do you want to continue with this result? y,n or q for quit: ")
+        again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
+        
     
-    elif again=='n':
+    while again =='n':
         result=calculate()
-        again = input("Do you want to continue with this result? y,n or q for quit: ") 
+        again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
         result = calculateWithResult(result)
-    else:
+        again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
+
+        
+    if again == 'q':
         print("Thank very much for using this calculator!")
         quit="q"       
     
