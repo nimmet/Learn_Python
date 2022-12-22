@@ -52,7 +52,9 @@ def calculateWithResult(result):
 while quit !="q":
     result=calculate() 
     again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
-
+    if again == 'q':
+            print("Thank very much for using this calculator!")
+            quit="q"
     
     
     
@@ -62,7 +64,9 @@ while quit !="q":
         
         result = calculateWithResult(result)
         again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
-        
+        if again == 'q':
+            print("Thank very much for using this calculator!")
+            quit="q"
     
     while again =='n':
         result=calculate()
@@ -71,9 +75,9 @@ while quit !="q":
         again = input(f"Type 'y' to continue calculating with {result} or \ntype 'n' to start a new calculation or \ntype 'q' to quit: ")
 
         
-    if again == 'q':
-        print("Thank very much for using this calculator!")
-        quit="q"       
+        if again == 'q':
+            print("Thank very much for using this calculator!")
+            quit="q"       
     
 
 
