@@ -1,5 +1,14 @@
 import random
 
+logo ="""
+╔══╗                
+╚╗╔╝[hello uyghur
+] 
+╔╝(¯`v´¯)(¯`v´¯)(¯` 
+╚══`.¸.´  `.¸.´  `. 
+"""
+
+print(logo)
 print("Welcome to the number guessing game!")
 
 print("I am thinking of a number between 1 and 100.")
@@ -31,6 +40,9 @@ while (tried < diff):
         attemp -= 1
     else:
         print("You win")
+    
+    if attemp == 0:
+        print("You have used all you attemps!")
         
     
     
