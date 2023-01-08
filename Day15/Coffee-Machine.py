@@ -32,4 +32,20 @@ resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
+    "money": 0,
 }
+
+
+answer = input("What would you like? (espresso/latte/cappuccino): ")
+
+if answer == "report":
+
+    
+    # for k, v in resources.items:
+    #     if k != "Coffee":
+    #         print(f"{k.capitalize()}: {v}ml")
+    #     elif k == "money":
+    #         print(f"Money: ${v}")
+            
+    #     else:
+    #         print(f"{k.capitalize()}: {v}g")
