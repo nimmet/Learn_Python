@@ -7,7 +7,7 @@ todos=[]
 while quit != "y":
     todo = input("Enter a todo: ")
     if todo !="y": 
-        todos.append(todo)
+        todos.append(todo.capitalize())
     else:
         quit ="y"
     
