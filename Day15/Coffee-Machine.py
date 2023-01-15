@@ -41,11 +41,11 @@ answer = input("What would you like? (espresso/latte/cappuccino): ")
 if answer == "report":
 
     
-    # for k, v in resources.items:
-    #     if k != "Coffee":
-    #         print(f"{k.capitalize()}: {v}ml")
-    #     elif k == "money":
-    #         print(f"Money: ${v}")
+    for k, v in resources.items():
+        if k == "coffee":
+            print(f"{k.capitalize()}: {v} g")
+        elif k == "money":
+            print(f"Money: ${v}")
             
-    #     else:
-    #         print(f"{k.capitalize()}: {v}g")
+        else:
+            print(f"{k.capitalize()}: {v} ml")
