@@ -4,3 +4,8 @@ for filename in filenames:
     filename = filename.replace(".","-",1)
     print (filename)
     
+
+names = ("Apple","IBM","Google")
+
+for name in names:
+    print(name)
