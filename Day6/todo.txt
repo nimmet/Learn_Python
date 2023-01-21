@@ -1,4 +1,4 @@
-learn Linux
-jaaava
-pythoon
-learn Linux
+React
+Python
+Java
+C And C++
