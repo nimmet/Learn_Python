@@ -25,8 +25,10 @@ while True:
             file = open('todo.txt', 'r')
             todos = file.readlines()
             
-            for index,item in enumerate(todos):
-                todos[index] = item.strip("\n")
+            # for index,item in enumerate(todos):
+            #     todos[index] = item.strip("\n")
+            
+            todos = [item.strip("\n") for item in todos]
             
             for i in range(len(todos)):
                 print(f"{i+1} - {todos[i]}")
