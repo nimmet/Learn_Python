@@ -49,6 +49,11 @@ while True:
             num = int(input("\nNumber of the todo to complete: "))
             todos.pop(num-1)
             
+            with open('todo.txt', 'w') as file:
+                for item in todos:
+                    file.writelines(item+"\n")
+                
+            
         case "exit":
             break
         
