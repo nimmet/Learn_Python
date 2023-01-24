@@ -19,10 +19,16 @@ while True:
     if "add" in action:
         
         # todos.append(todo.title())
-        todo = action.replace("add","").strip()
+        # todo = action.replace("add","").strip()
+        todo = action[4:]
+        
+        with open('todo.txt', 'r') as file:
+            todos = file.readlines()
+        
+        todos.append("\n"+todo.title().strip())
     
-        with open('todo.txt', 'a') as file:
-            file.writelines("\n"+todo.title())
+        with open('todo.txt', 'w') as file:
+            file.writelines(todos)
     # else:
     #     todo = input("Enter a todo: ")+"\n"
             
