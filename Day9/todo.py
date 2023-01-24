@@ -33,7 +33,7 @@ while True:
     #     todo = input("Enter a todo: ")+"\n"
             
         
-    if "show" in action:
+    elif "show" in action:
         with open('todo.txt', 'r') as file:
             todos = file.readlines()
         
@@ -45,7 +45,7 @@ while True:
         for i in range(len(todos)):
             print(f"{i+1} - {todos[i]}")
             
-    if "display" in action:
+    elif "display" in action:
         with open('todo.txt', 'r') as file:
             todos = file.readlines()
         
@@ -58,32 +58,42 @@ while True:
             print(f"{i+1} - {todos[i]}")
         
         
-    if "edit" in action:
+    elif "edit" in action:
         with open('todo.txt', 'r') as file:
             todos = file.readlines()
         
         
-        num = int(input("Number of the todo to edit:"))
+        # num = int(input("Number of the todo to edit:"))
+        num = int(action[5:])
         new_todo = input("Enter new todo: ")
         todos[num-1]=new_todo.title()+"\n"
         with open('todo.txt','w') as file:
             file.writelines(todos)
         
         
-    if "complete" in action:
-        num = int(input("\nNumber of the todo to complete: "))
+    elif "complete" in action:
+        # num = int(input("\nNumber of the todo to complete: "))
+        num = int(action[len("complete"):])
+        
+        with open('todo.txt', 'r') as file:
+            todos = file.readline()
+        
+        todos = [item.strip("\n") for item in todos] 
+               
         todos.pop(num-1)
         
         with open('todo.txt', 'w') as file:
-            for item in todos:
-                file.writelines(item+"\n")
+            file.writelines(todos)
             
         
-    if "exit" in action:
+    elif "exit" in action:
         break
     
-    if "clear" in action:
+    elif "clear" in action:
         os.system("cls")
+    
+    else:
+        print("Command is not valid.")
     
     # case _:
     #     print("Please just enter the command offered")
