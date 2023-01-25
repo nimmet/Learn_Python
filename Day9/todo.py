@@ -16,7 +16,7 @@ while True:
         #     todos.append(todo.title())
             
             
-    if "add" in action:
+    if "add" in action or "new" in action or "more" in action:
         
         # todos.append(todo.title())
         # todo = action.replace("add","").strip()
