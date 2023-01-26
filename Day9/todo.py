@@ -74,13 +74,13 @@ while True:
     elif "complete" in action:
         # num = int(input("\nNumber of the todo to complete: "))
         num = int(action[len("complete"):])
-        
         with open('todo.txt', 'r') as file:
-            todos = file.readline()
+            todos = file.readlines()
         
-        todos = [item.strip("\n") for item in todos] 
+        todos = [item for item in todos] 
                
         todos.pop(num-1)
+        
         
         with open('todo.txt', 'w') as file:
             file.writelines(todos)
