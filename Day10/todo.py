@@ -43,6 +43,8 @@ while True:
         todos = [item.strip("\n") for item in todos]
         
         for i in range(len(todos)):
+            if i =='':
+                continue
             print(f"{i+1} - {todos[i]}")
             
     elif "display" in action:
@@ -72,22 +74,27 @@ while True:
                 file.writelines(todos)
         except ValueError:
             print("You command is not valid.")
-            action = input("\nType add, show, edit, clear, complete or exit: ").strip()
-
+            continue
         
     elif "complete" in action:
-        # num = int(input("\nNumber of the todo to complete: "))
-        num = int(action[len("complete"):])
-        with open('todo.txt', 'r') as file:
-            todos = file.readlines()
         
-        todos = [item for item in todos] 
-               
-        todos.pop(num-1)
-        
-        
-        with open('todo.txt', 'w') as file:
-            file.writelines(todos)
+        try:
+            # num = int(input("\nNumber of the todo to complete: "))
+            num = int(action[len("complete"):])
+            with open('todo.txt', 'r') as file:
+                todos = file.readlines()
+            
+            todos = [item for item in todos] 
+                
+            todos.pop(num-1)
+            
+            
+            with open('todo.txt', 'w') as file:
+                file.writelines(todos)
+                
+        except IndexError:
+            print("There is no item with that number.")
+            continue
             
         
     elif "exit" in action:
