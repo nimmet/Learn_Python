@@ -6,9 +6,9 @@ def get_todos(filename):
             todos = file.readlines()    
     return todos
 
-def write_todos(filename):
+def write_todos(filename,todos_arg):
     with open(filename, 'w') as file:
-            file.writelines(todos)
+            file.writelines(todos_arg)
             
 
     
@@ -43,7 +43,7 @@ while True:
         
         todos.append("\n"+todo.title().strip())
     
-        write_todos('todo.txt')
+        write_todos('todo.txt',todos)
     # else:
     #     todo = input("Enter a todo: ")+"\n"
             
@@ -85,7 +85,7 @@ while True:
             num = int(action[5:])
             new_todo = input("Enter new todo: ")
             todos[num-1]=new_todo.title()+"\n"
-            write_todos('todo.txt')
+            write_todos('todo.txt',todos)
             
         except ValueError:
             print("You command is not valid.")
@@ -103,7 +103,7 @@ while True:
             todos.pop(num-1)
             
             
-            write_todos('todo.txt')
+            write_todos('todo.txt',todos)
                 
         except IndexError:
             print("There is no item with that number.")
