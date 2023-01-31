@@ -2,6 +2,7 @@ import os
 # todos = []
 
 def get_todos(filename="todo.txt"):
+    """read data from a file and return as a list"""
     with open(filename, 'r') as file:
             todos = file.readlines()    
     return todos
