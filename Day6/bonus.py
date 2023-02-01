@@ -9,4 +9,4 @@ filenames=["doc.txt","report.txt","present.txt"]
 for filename,content in zip(filenames,contents):
     file = open(filename,"w")
     file.write(content)
-    
+    file.close()
