@@ -1,8 +1,10 @@
 import os
 from functions import get_todos, write_todos
+import time
 # todos = []
    
-
+now = time.strftime("%b %d, %Y %H:%M:%S")
+print("It is ",now)
 while True:
     
     
