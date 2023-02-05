@@ -1,16 +1,9 @@
-import csv
+import json
 
-answer=0
-with open("quiz.csv") as file:
-    data = list(csv.reader(file))
+with open("quiz.json","r") as file:
+    content = file.read()
     
-    for d in data:
-        c=1
-        
-        print(d[0])
-        for i in len(d):
-            print(f"{i+1}-{d[i]}")
-            c += 1
+data = json.loads(content)
 
-print(data)
-            
+for question in data:
+    print(question["question_text"])

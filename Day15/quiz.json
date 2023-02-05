@@ -1,0 +1,12 @@
+[
+    {"question_text":"What are dolphins?",
+"alternatives":["amphibians","fish","mammals","birds"],
+"answer":3
+},
+{"question_text":"What occupies most of the Earch's surface?",
+"alternatives":["land","water"],
+"answer":2
+}
+]
+
+
