@@ -14,7 +14,7 @@ data = json.loads(content)
 for question in data:
     print(question["question_text"].capitalize())
     for index,option in enumerate(question["alternatives"]):
-        print(f"{index}-{option.capitalize()}")
+        print(f"{index+1}-{option.capitalize()}")
     user_input = int(input("Enter your answer: "))
     an={}
     an["user"] = user_input
