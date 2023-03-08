@@ -10,3 +10,5 @@ Perl
 C#
 Pentest+
 Job
+AWS Security Specialist
+AWS Cloud Architecture
