@@ -32,4 +32,3 @@ for index, question in enumerate(data):
 
 print(f"Score {score} / {len(data)}") 
 
-# hello python
