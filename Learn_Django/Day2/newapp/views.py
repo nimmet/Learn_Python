@@ -7,7 +7,9 @@ def verifyName(request):
     return HttpResponse(name)
 
 def home(request):
-    return render(request,'index.html')
+    name = "Uyghur"
+    age = 20
+    return render(request,'index.html',{'name':name,'age':age})
 
 def form(request):
     return render(request,'test.html')
