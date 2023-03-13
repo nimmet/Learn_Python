@@ -12,4 +12,6 @@ def home(request):
     return render(request,'index.html',{'name':name,'age':age})
 
 def form(request):
-    return render(request,'test.html')
+    name="Uyghur"
+    email="Uyghur@gmail.com"
+    return render(request,'test.html',{'name':name,'email':email})
