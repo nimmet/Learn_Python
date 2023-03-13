@@ -7,3 +7,10 @@ class Customer(models.Model):
     age = models.IntegerField()
     mobile = models.ImageField()
     
+    def __str__(self):
+        self.name = name 
+        self.age = age
+        self.mobile = mobile
+        
+        
+    
