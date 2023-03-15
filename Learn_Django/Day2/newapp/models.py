@@ -11,6 +11,7 @@ class Customer(models.Model):
         self.name = name 
         self.age = age
         self.mobile = mobile
+        return f"Name: {self.name}, Age: {str(self.age)}, Mobile: {self.mobile}"
         
         
     
