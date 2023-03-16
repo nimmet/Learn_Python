@@ -8,9 +8,9 @@ class Customer(models.Model):
     mobile = models.ImageField()
     
     def __str__(self):
-        self.name = name 
-        self.age = age
-        self.mobile = mobile
+        # self.name = name 
+        # self.age = age
+        # self.mobile = mobile
         return f"Name: {self.name}, Age: {str(self.age)}, Mobile: {self.mobile}"
         
         
