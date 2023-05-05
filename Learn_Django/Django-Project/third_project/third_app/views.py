@@ -8,3 +8,13 @@ def example_view(request):
 
 def example_form(request):
     return render(request, 'third_app/example_form.html')
+
+
+def variable_view(request):
+    
+    my_var = {
+    'first_name': 'Uyghur','last_name': 'Lopnur', 
+    'some_list': [1,2,3], 'some_dict': {'city':'Korla'}   
+    }
+    
+    return render(request, 'third_app/variable.html',context=my_var)

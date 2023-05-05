@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Variables</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+       <h1>Variable.html</h1>
+
+       <ul>
+        {% for item in  some_list%}
+
+        <li> {{item}} </li>
+
+
+        {% endfor %}
+       </ul>
+
+       <ul>
+
+        {% for k,v in some_dict.items  %}
+        <li>{{k | capfirst}} {{v}}</li>
+        {% endfor %}
+
+       </ul>
+
+
+
+
+
+
+       {% comment %} <h2>Her first name was <em>{{first_name|upper}}</em> 
+        and last name was <em>{{last_name|upper}}</em></h2>
+        <h2>{{some_list}}</h2>
+        <h2><strong>City: {{some_dict.city|capfirst}}</strong></h2>
+        <p>{# Comment #}</p> {% endcomment %}
+    </body>
+</html>
