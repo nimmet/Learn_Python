@@ -15,9 +15,13 @@
 
        <ul>
         {% for item in  some_list%}
+        {% if item == 2 %}
+        <li>TWO</li>
+        {% else %}
 
         <li> {{item}} </li>
 
+        {% endif %}
 
         {% endfor %}
        </ul>
@@ -28,7 +32,15 @@
         <li>{{k | capfirst}} {{v}}</li>
         {% endfor %}
 
-       </ul>
+        {% if user_logged_in == True %}
+        <h1>Welcome {{first_name}}!</h1>
+
+        {% endif%}
+
+        
+    </ul>
+    <h1><a href={% url 'third_app:example'%}>Back to home page</a>
+    </h1>
 
 
 
